@@ -13,7 +13,7 @@ const client = new Client();
   try {
     if(!env.INCLUDE_JUMP_BLOCKS) 
     {
-      board = await client.withToken(BOTMOCK_TOKEN).getBoard(env.BOTMOCK_TEAM_ID, env.BOTMOCK_PROJECT_ID, env.BOTMOCK_BOARD_ID);
+      board = await client.withToken(env.BOTMOCK_TOKEN).getBoard(env.BOTMOCK_TEAM_ID, env.BOTMOCK_PROJECT_ID, env.BOTMOCK_BOARD_ID);
     } else {
       board = await client.withToken(env.BOTMOCK_TOKEN).createBuildProject(env.BOTMOCK_TEAM_ID, env.BOTMOCK_PROJECT_ID)
     }
